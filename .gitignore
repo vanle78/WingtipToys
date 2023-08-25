@@ -1,0 +1,8 @@
+WingtipToys/bin/
+WingtipToysobj/
+# ignores all .md files
+.md
+# does not ignore the README.md file
+!README.md
+# add .env file to .gitignore
+echo ".env" >> .gitignore
