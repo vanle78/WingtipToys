@@ -22,7 +22,7 @@ namespace WingtipToys.Models
         public double? UnitPrice { get; set; }
 
         public int? CategoryID { get; set; }
-
+        // 1 Product has one Category
         public virtual Category Category { get; set; }
     }
 }
