@@ -8,6 +8,7 @@ namespace WingtipToys.Models
 {
     public class ProductContext: DbContext
     {
+        // WingtipToys: la name cua ConnectionString
         public ProductContext() : base("name=WingtipToys") { }
 
         public virtual DbSet<Category> Categories { get; set; }
