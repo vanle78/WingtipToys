@@ -18,7 +18,7 @@ namespace WingtipToys.Models
 
         public string ImagePath { get; set; }
 
-        [Display(Name ="Price")]
+        [Display(Name ="Unit Price")]
         public double? UnitPrice { get; set; }
 
         public int? CategoryID { get; set; }
