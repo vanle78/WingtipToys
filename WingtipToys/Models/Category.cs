@@ -14,6 +14,7 @@ namespace WingtipToys.Models
         public string CategoryName { get; set; }
         [Display(Name = "Category Description")]
         public string Description { get; set; }
+        // One Category has many Products
         public virtual ICollection<Product> Products { get; set; }
     }
 }
