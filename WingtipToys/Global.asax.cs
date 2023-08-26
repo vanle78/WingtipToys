@@ -17,22 +17,24 @@ namespace WingtipToys
         {
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);        
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            using (var context = new ProductContext())
-            {
-                if(context.Categories.Count() == 0)
-                {
-                    GetCategories().ForEach(c => context.Categories.Add(c));
-                    context.SaveChanges();
-                }
-                if(context.Products.Count() == 0 )
-                {
-                    GetProducts().ForEach(p => context.Products.Add(p));
-                    context.SaveChanges();
-                }
+            var context = new ProductContext();
 
-            }
+            //using (var context = new ProductContext())
+            //{
+            //    if(context.Categories.Count() == 0)
+            //    {
+            //        GetCategories().ForEach(c => context.Categories.Add(c));
+            //        context.SaveChanges();
+            //    }
+            //    if(context.Products.Count() == 0 )
+            //    {
+            //        GetProducts().ForEach(p => context.Products.Add(p));
+            //        context.SaveChanges();
+            //    }
+
+            //}
         }
 
         private static List<Category> GetCategories()
